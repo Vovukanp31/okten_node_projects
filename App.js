@@ -1,12 +1,12 @@
 const path = require('path');
 const fs = require('fs').promises;
 
-fs.mkdir(path.join(__dirname, 'main'), (err => {
-    if (err) {
-        console.log(err)
-        throw err
-    }
-}));
+// fs.mkdir(path.join(__dirname, 'main'), (err => {
+//     if (err) {
+//         console.log(err)
+//         throw err
+//     }
+// }));
 
 const folderCreator = async (folderName) => {
     await fs.mkdir(path.join(__dirname, 'main', `${folderName}`), {recursive: true});
